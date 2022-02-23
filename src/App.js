@@ -4,6 +4,7 @@ import Menu from "./components/Menu";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import UserProfile from "./pages/UserProfile";
+
 function App() {
   return (
     <Router>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/UserProfileComponent.css";
 import "../css/styles.css";
+import "../css/font.css";
 import { IoMdLocate, IoMdGlobe } from "react-icons/io";
 export default function UserProfileComponent({ username }) {
   const clientId = "FwljzQEvxnR6bIbxaLGzVo10O6ukTGug8efjV7fi_eo";

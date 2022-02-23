@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/PhotoListComponent.css";
+import "../css/font.css";
 import axios from "axios";
 import { IoMdHeart, IoMdText } from "react-icons/io";
 export default function PhotoList({ username }) {
@@ -28,7 +29,7 @@ export default function PhotoList({ username }) {
                 <div className="gallery-item" tabIndex={0}>
                   <img
                     key={item.id}
-                    src={item.urls.full}
+                    src={item.urls.small}
                     className="gallery-image"
                     alt=""
                   />

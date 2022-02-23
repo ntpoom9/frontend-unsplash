@@ -24,6 +24,15 @@ body {
   color: #000000;
   font-weight: bold;
 }
+.content_des {
+  width: 100%;
+  word-wrap: break-word;
+  /* white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  overflow: hidden; */
+}
 /* template */
 /* a {
   text-decoration: none;

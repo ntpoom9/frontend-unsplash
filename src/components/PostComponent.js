@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "../css/Post.css";
+import "../css/font.css";
 function PostComponent({ result }) {
   return (
     <div>
@@ -31,16 +32,16 @@ function PostComponent({ result }) {
                 </div>
 
                 <div className="instagram-card-content">
-                  <p>
+                  <p className="content_des">
                     <p className="content_likes">
                       {post.user.total_likes} likes
                     </p>
                     <a
                       class="instagram-card-content-user"
-                      href="https://www.instagram.com/followmeto/"
+                      href={"/" + post.user.username}
                     >
                       {post.user.instagram_username}
-                    </a>
+                    </a>{" "}
                     {post.description}
                   </p>
                 </div>
