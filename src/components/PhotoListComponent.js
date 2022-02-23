@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/PhotoListComponent.css";
-import "../css/font.css";
+// import "../css/font.css";
 import axios from "axios";
 import { IoMdHeart, IoMdText } from "react-icons/io";
 export default function PhotoList({ username }) {

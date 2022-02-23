@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 import "../css/SearchComponent.css";
-import "../css/font.css";
+// import "../css/font.css";
 import PostComponent from "./PostComponent";
 // import dotenv from "dotenv";
 function SearchComponent() {

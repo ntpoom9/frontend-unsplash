@@ -9,7 +9,7 @@ import {
   NavLink,
 } from "reactstrap";
 import "../css/Menu.css";
-import "../css/font.css";
+// import "../css/font.css";
 function Menu() {
   const [isOpen, setIsOPen] = useState(false);
   const toggle = () => setIsOPen(!isOpen);

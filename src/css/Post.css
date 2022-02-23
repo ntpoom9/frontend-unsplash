@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
 }
+@import url("https://fonts.googleapis.com/css?family=Changa&display=swap");
 
 body {
   background-color: #eee;
   margin: 0;
   padding: 3em 1em;
+  font-family: "Changa";
 }
 
 ul {

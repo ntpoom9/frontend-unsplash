@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "../css/Post.css";
-import "../css/font.css";
+// import "../css/font.css";
 function PostComponent({ result }) {
   return (
     <div>
