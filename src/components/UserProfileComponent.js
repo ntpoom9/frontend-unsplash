@@ -37,7 +37,7 @@ export default function UserProfileComponent({ username }) {
           </div>
           <div className="profile-user-settings">
             {data.map((d) => {
-              return <h1 className="profile-user-name">{d.username}</h1>;
+              return <h2 className="profile-user-name">{d.username}</h2>;
             })}
           </div>
           <div className="profile-stats">

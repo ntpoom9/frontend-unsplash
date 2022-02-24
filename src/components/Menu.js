@@ -28,7 +28,6 @@ function Menu() {
           </Nav>
         </Collapse>
       </Navbar>
-      <hr />
     </>
   );
 }

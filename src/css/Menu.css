@@ -11,7 +11,8 @@ body {
   /* background-color: #fafafa; */
 }
 .navbar {
-  background-color: #fafafa;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
 }
 .navbar-brand {
   color: #000000;
