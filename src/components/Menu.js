@@ -14,20 +14,22 @@ function Menu() {
   const [isOpen, setIsOPen] = useState(false);
   const toggle = () => setIsOPen(!isOpen);
   return (
-    <Navbar
-      className="navbar navbar-expand-md navbar-dark fixed-top bg-dark "
-      expand="md"
-    >
-      <NavbarBrand href="/">IO-Stagram</NavbarBrand>
-      <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="mr-auto" navbar>
-          {/* <NavItem>
+    <>
+      <Navbar className="navbar navbar-expand-md  fixed-top " expand="md">
+        <NavbarBrand className="NavbarBrand" href="/">
+          IO-Stagram
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            {/* <NavItem>
             <NavLink href="/">Product List</NavLink>
           </NavItem> */}
-        </Nav>
-      </Collapse>
-    </Navbar>
+          </Nav>
+        </Collapse>
+      </Navbar>
+      <hr />
+    </>
   );
 }
 

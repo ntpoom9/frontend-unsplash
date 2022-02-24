@@ -1,4 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Changa&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani&display=swap");
 body {
-  font-family: "Changa";
+  /* font-family: "Dosis"; */
+  font-family: "Rajdhani";
+}
+
+.NavbarBrand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* background-color: #fafafa; */
+}
+.navbar {
+  background-color: #fafafa;
+}
+.navbar-brand {
+  color: #000000;
+  text-decoration: none;
+}
+.navbar-brand:hover {
+  color: #000000;
+  text-decoration: none;
 }

@@ -29,7 +29,7 @@ export default function PhotoList({ username }) {
                 <div className="gallery-item" tabIndex={0}>
                   <img
                     key={item.id}
-                    src={item.urls.small}
+                    src={item.urls.regular}
                     className="gallery-image"
                     alt=""
                   />
