@@ -4,15 +4,10 @@ import "../css/UserProfileComponent.css";
 import "../css/styles.css";
 // import "../css/font.css";
 import { IoMdLocate, IoMdGlobe } from "react-icons/io";
-export default function UserProfileComponent({ username }) {
-  const clientId = "FwljzQEvxnR6bIbxaLGzVo10O6ukTGug8efjV7fi_eo";
-  const [data, setData] = useState([]);
-  const url =
-    "https://api.unsplash.com/search/users?query=" +
-    username +
-    "&client_id=" +
-    clientId;
 
+export default function UserProfileComponent({ username }) {
+  const [data, setData] = useState([]);
+  const url = `${process.env.REACT_APP_SEARCH_USER}?query=${username}&client_id=${process.env.REACT_APP_CLIENT_ID}`;
   useEffect(() => {
     axios.get(url).then((respond) => {
       console.log(respond);
@@ -72,7 +67,7 @@ export default function UserProfileComponent({ username }) {
                   </p>
                   <p>
                     <IoMdGlobe />{" "}
-                    {d.portfolio_url === null ? "-" : d.portfolio_url}
+                    <a>{d.portfolio_url === null ? "-" : d.portfolio_url}</a>
                   </p>
                 </>
               );

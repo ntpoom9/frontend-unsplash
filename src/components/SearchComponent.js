@@ -6,9 +6,6 @@ import { IoMdSearch } from "react-icons/io";
 import "../css/SearchComponent.css";
 
 function SearchComponent() {
-  const [clientId, setClientId] = useState(
-    "FwljzQEvxnR6bIbxaLGzVo10O6ukTGug8efjV7fi_eo"
-  );
   const [post, setPost] = useState("");
   const [result, setResult] = useState([]);
 
@@ -18,14 +15,7 @@ function SearchComponent() {
   function handleKeyPress(e) {
     // We pass the new value of the text when calling onAccept
     if (e.key === "Enter") {
-      console.log(post);
-      console.log(e.key);
-      const url =
-        "https://api.unsplash.com/search/photos?query=" +
-        post +
-        "&client_id=" +
-        clientId;
-
+      const url = `${process.env.REACT_APP_SEARCH_PHOTOS}?query=${post}&client_id=${process.env.REACT_APP_CLIENT_ID}`;
       axios.get(url).then((respond) => {
         console.log(respond);
         setResult(respond.data.results);

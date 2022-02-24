@@ -4,13 +4,9 @@ import "../css/PhotoListComponent.css";
 import axios from "axios";
 import { IoMdHeart, IoMdText } from "react-icons/io";
 export default function PhotoList({ username }) {
-  const clientId = "FwljzQEvxnR6bIbxaLGzVo10O6ukTGug8efjV7fi_eo";
   const [data, setData] = useState([]);
-  const url =
-    "https://api.unsplash.com/users/" +
-    username +
-    "/photos?client_id=" +
-    clientId;
+
+  const url = `${process.env.REACT_APP_PHOTO_LIST}/${username}/photos?client_id=${process.env.REACT_APP_CLIENT_ID}`;
 
   useEffect(() => {
     axios.get(url).then((respond) => {
