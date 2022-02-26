@@ -36,6 +36,7 @@ figcaption {
   -webkit-overflow-scrolling: touch; */
   padding: 2em 1em;
   /* background: white; */
+  display: inline-block;
 }
 @media all and (min-width: 600px) {
   .grid {

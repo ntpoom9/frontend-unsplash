@@ -3,7 +3,7 @@ import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import "../css/Post.css";
 // import "../css/font.css";
-function PostComponent({ result }) {
+export default function PostComponent({ result }) {
   return (
     <div>
       <ul className="grid">
@@ -66,5 +66,3 @@ function PostComponent({ result }) {
     </div>
   );
 }
-
-export default PostComponent;

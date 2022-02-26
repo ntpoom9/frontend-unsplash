@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import PhotoListComponent from "../components/PhotoListComponent";
 import UserProfileComponent from "../components/UserProfileComponent";
 
-function UserProfile() {
+export default function UserProfile() {
   const param = useParams();
   const username = param.username;
 
@@ -14,5 +14,3 @@ function UserProfile() {
     </div>
   );
 }
-
-export default UserProfile;
