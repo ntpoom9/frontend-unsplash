@@ -67,7 +67,9 @@ export default function UserProfileComponent({ username }) {
                   </p>
                   <p>
                     <IoMdGlobe />{" "}
-                    <a>{d.portfolio_url === null ? "-" : d.portfolio_url}</a>
+                    <a href={d.portfolio_url === null ? "#" : d.portfolio_url}>
+                      {d.portfolio_url === null ? "-" : d.portfolio_url}
+                    </a>
                   </p>
                 </>
               );

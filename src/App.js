@@ -8,6 +8,7 @@ import UserProfile from "./pages/UserProfile";
 function App() {
   return (
     <Router>
+      {/* component ที่ต้องใช้ทุกหน้า ไว้ที่นี่ */}
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
