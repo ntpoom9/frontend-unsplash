@@ -32,11 +32,9 @@ figcaption {
   grid-auto-flow: column;
   grid-auto-columns: 90%;
   grid-gap: 1em;
+  padding: 2em 1em;
   /* overflow-x: scroll;
   -webkit-overflow-scrolling: touch; */
-  padding: 2em 1em;
-  /* background: white; */
-  display: inline-block;
 }
 @media all and (min-width: 600px) {
   .grid {
