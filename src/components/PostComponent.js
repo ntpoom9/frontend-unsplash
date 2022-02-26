@@ -41,7 +41,10 @@ function PostComponent({ result }) {
                     <span>&nbsp;&nbsp;</span>
                     <FiSend />
                     <p className="content_likes">
-                      {post.user.total_likes} likes
+                      {post.user.total_likes.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                      })}{" "}
+                      likes
                     </p>
                     <a
                       class="instagram-card-content-user"

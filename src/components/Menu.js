@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from "reactstrap";
 import "../css/Menu.css";
-// import "../css/font.css";
-function Menu() {
+
+export default function Menu() {
   const [isOpen, setIsOPen] = useState(false);
+  //สำหรับ responsive
   const toggle = () => setIsOPen(!isOpen);
   return (
     <>
@@ -21,15 +14,9 @@ function Menu() {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            {/* <NavItem>
-            <NavLink href="/">Product List</NavLink>
-          </NavItem> */}
-          </Nav>
+          <Nav className="mr-auto" navbar></Nav>
         </Collapse>
       </Navbar>
     </>
   );
 }
-
-export default Menu;

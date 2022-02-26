@@ -1,12 +1,10 @@
 import React from "react";
 import SearchComponent from "../components/SearchComponent";
 
-function Home() {
+export default function Home() {
   return (
     <>
       <SearchComponent />
     </>
   );
 }
-
-export default Home;

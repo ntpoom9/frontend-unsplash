@@ -40,16 +40,26 @@ export default function UserProfileComponent({ username }) {
               return (
                 <ul className="ulProfile">
                   <li>
-                    <span className="profile-stat-count">{d.total_photos}</span>{" "}
+                    <span className="profile-stat-count">
+                      {d.total_photos.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                      })}
+                    </span>{" "}
                     photos
                   </li>
                   <li>
-                    <span className="profile-stat-count">{d.total_likes}</span>{" "}
+                    <span className="profile-stat-count">
+                      {d.total_likes.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                      })}
+                    </span>{" "}
                     likes
                   </li>
                   <li>
                     <span className="profile-stat-count">
-                      {d.total_collections}
+                      {d.total_collections.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                      })}
                     </span>{" "}
                     collections
                   </li>

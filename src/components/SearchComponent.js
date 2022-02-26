@@ -1,31 +1,26 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-// import dotenv from "dotenv";
+import React, { useState } from "react";
 import PostComponent from "./PostComponent";
-import { IoMdSearch } from "react-icons/io";
 import "../css/SearchComponent.css";
 
-function SearchComponent() {
-  const [post, setPost] = useState("");
-  const [result, setResult] = useState([]);
+export default function SearchComponent() {
+  const [post, setPost] = useState(""); //state เก็บ keyword search
+  const [result, setResult] = useState([]); //state เก็บ data API
 
   function handleChange(event) {
+    //state เปลี่ยนตาม  keyword
     setPost(event.target.value);
   }
   function handleKeyPress(e) {
-    // We pass the new value of the text when calling onAccept
+    // เมื่อ Enter จะเป็นการค้นหาข้อมูล ใช้แทนการกดค้นหา
     if (e.key === "Enter") {
-      const url = `${process.env.REACT_APP_SEARCH_PHOTOS}?query=${post}&client_id=${process.env.REACT_APP_CLIENT_ID}`;
+      const url = `${process.env.REACT_APP_SEARCH_PHOTOS}?query=${post}&${process.env.REACT_APP_PER_PAGE}&client_id=${process.env.REACT_APP_CLIENT_ID}`;
       axios.get(url).then((respond) => {
         console.log(respond);
         setResult(respond.data.results);
       });
     }
   }
-  useEffect(() => {
-    // handleSubmit();
-    // handleKeyPress();
-  }, []);
 
   return (
     <div>
@@ -43,5 +38,3 @@ function SearchComponent() {
     </div>
   );
 }
-
-export default SearchComponent;
