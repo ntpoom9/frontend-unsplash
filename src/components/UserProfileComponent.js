@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/UserProfileComponent.css";
 import "../css/styles.css";
-// import "../css/font.css";
 import { IoMdLocate, IoMdGlobe } from "react-icons/io";
 
 export default function UserProfileComponent({ username }) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); //state สำหรับ เก็บข้อมูลจาก API
+  // API สำหรับค้นหาข้อมูลผู้ใช้ จาก username
   const url = `${process.env.REACT_APP_SEARCH_USER}?query=${username}&client_id=${process.env.REACT_APP_CLIENT_ID}`;
   useEffect(() => {
     axios.get(url).then((respond) => {
@@ -19,6 +19,7 @@ export default function UserProfileComponent({ username }) {
     <div className="navMargin">
       <div className="container">
         <div className="profile">
+          {/* แสดงรูปเจ้าของภาพ */}
           <div className="profile-image">
             {data.map((d) => {
               return (
@@ -30,11 +31,15 @@ export default function UserProfileComponent({ username }) {
               );
             })}
           </div>
+
+          {/* แสดงชื่อ */}
           <div className="profile-user-settings">
             {data.map((d) => {
               return <h2 className="profile-user-name">{d.username}</h2>;
             })}
           </div>
+
+          {/* แสดงจำนวนรูป ยอดไลค์ คอลเลคชั่น */}
           <div className="profile-stats">
             {data.map((d) => {
               return (
@@ -67,6 +72,8 @@ export default function UserProfileComponent({ username }) {
               );
             })}
           </div>
+
+          {/* แสดงข้อความ bio  */}
           <div className="profile-bio">
             {data.map((d) => {
               return (

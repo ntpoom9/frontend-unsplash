@@ -31,12 +31,12 @@ figcaption {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 90%;
-  grid-gap: 1em;
+  grid-gap: 0.5em;
   padding: 2em 1em;
   /* overflow-x: scroll;
   -webkit-overflow-scrolling: touch; */
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 500px) {
   .grid {
     grid-auto-flow: initial;
     grid-template-columns: repeat(auto-fit, minmax(auto, 20em));

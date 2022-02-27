@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { IoMdHeart, IoMdText } from "react-icons/io";
-export default function PhotoList({ username }) {
-  const [data, setData] = useState([]);
 
+export default function PhotoList({ username }) {
+  const [data, setData] = useState([]); //state สำหรับเก็บข้อมูลจาก API
   const url = `${process.env.REACT_APP_PHOTO_LIST}/${username}/photos?${process.env.REACT_APP_PER_PAGE}&client_id=${process.env.REACT_APP_CLIENT_ID}`;
 
   useEffect(() => {
@@ -20,7 +20,6 @@ export default function PhotoList({ username }) {
           <div className="gallery">
             {data.map((item) => {
               return (
-                // <a href={item.urls.full} target="_blank">
                 <a
                   className="gallery-item"
                   tabIndex={0}
@@ -52,7 +51,6 @@ export default function PhotoList({ username }) {
                     </ul>
                   </div>
                 </a>
-                // </a>
               );
             })}
           </div>
