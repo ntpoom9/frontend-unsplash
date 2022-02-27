@@ -17,6 +17,7 @@ export default function PostComponent({ result }) {
                   <a
                     class="instagram-card-user-name"
                     href={"/" + post.user.username}
+                    target="_blank"
                   >
                     {post.user.instagram_username === null
                       ? post.user.username
@@ -49,6 +50,7 @@ export default function PostComponent({ result }) {
                     <a
                       class="instagram-card-content-user"
                       href={"/" + post.user.username}
+                      target="_blank"
                     >
                       {post.user.instagram_username === null
                         ? post.user.username

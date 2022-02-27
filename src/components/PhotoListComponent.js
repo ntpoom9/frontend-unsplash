@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../css/PhotoListComponent.css";
-// import "../css/font.css";
 import axios from "axios";
 import { IoMdHeart, IoMdText } from "react-icons/io";
 export default function PhotoList({ username }) {
@@ -22,13 +20,20 @@ export default function PhotoList({ username }) {
           <div className="gallery">
             {data.map((item) => {
               return (
-                <div className="gallery-item" tabIndex={0}>
+                // <a href={item.urls.full} target="_blank">
+                <a
+                  className="gallery-item"
+                  tabIndex={0}
+                  href={item.urls.regular}
+                  target="_blank"
+                >
                   <img
                     key={item.id}
                     src={item.urls.regular}
                     className="gallery-image"
-                    alt=""
+                    alt={item.alt_description}
                   />
+
                   <div className="gallery-item-info">
                     <ul>
                       <li className="gallery-item-likes">
@@ -46,7 +51,8 @@ export default function PhotoList({ username }) {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </a>
+                // </a>
               );
             })}
           </div>
